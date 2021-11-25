@@ -148,7 +148,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.florius.unityoptimization
     Standalone: com.ninsar.unity-template
-    iPhone: com.ninsar.unity-template
+    iPhone: com.florius.unity-optimization
   buildNumber:
     Standalone: 0
     iPhone: 0

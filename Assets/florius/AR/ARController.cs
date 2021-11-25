@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -19,18 +18,24 @@ namespace florius.AR
 
             foreach (var trackedImage in args.updated)
             {
-                if (trackedImage.trackingState == TrackingState.Tracking)
-                {
-                    ARSessionOrigin.MakeContentAppearAt(
-                        Content, trackedImage.transform.position, trackedImage.transform.localRotation
-                    );
-                }
+                if (trackedImage.trackingState != TrackingState.Tracking) continue;
+
+                ARSessionOrigin.MakeContentAppearAt(
+                    Content, trackedImage.transform.position, trackedImage.transform.localRotation
+                );
+
+                Content.gameObject.SetActive(true);
+
+                _isContentPlaced = true;
+
+                break;
             }
         }
 
         private void OnEnable()
         {
             TrackedImageManager.trackedImagesChanged += OnTrackedImagesChanged;
+            Content.gameObject.SetActive(false);
         }
 
         private void OnDisable()
