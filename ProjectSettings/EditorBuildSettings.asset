@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Ninsar/main.unity
+    path: Assets/florius/main.unity
     guid: d946bda6d5f464fd0a00769cb78ab589
-  m_configObjects: {}
+  m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b263a50aff4a54044a8a9dadd30a81b3, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 6c95cc55a44cd4a39850387e138535bf, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 38e11406f403e4cbba8f3e5b551af768, type: 2}
